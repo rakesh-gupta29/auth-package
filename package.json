@@ -1,0 +1,73 @@
+{
+  "name": "rakesh-ds-common",
+  "version": "1.0.4",
+  "description": "Shared web components and auth utilities for React and Vue apps",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "license": "MIT",
+  "author": "Rakesh",
+  "keywords": [
+    "web-components",
+    "lit",
+    "react",
+    "vue",
+    "auth",
+    "authentication",
+    "navbar",
+    "sidebar",
+    "footer",
+    "design-system",
+    "shared-components"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rakesh/rakesh-ds-common.git"
+  },
+  "homepage": "https://github.com/rakesh/rakesh-ds-common#readme",
+  "bugs": {
+    "url": "https://github.com/rakesh/rakesh-ds-common/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./components": {
+      "types": "./dist/components/index.d.ts",
+      "default": "./dist/components/index.js"
+    },
+    "./auth": {
+      "types": "./dist/auth/index.d.ts",
+      "default": "./dist/auth/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE.md"
+  ],
+  "peerDependencies": {
+    "lit": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "lit": "^3.3.1",
+    "typescript": "^5.3.0"
+  }
+}
